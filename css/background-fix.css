@@ -1,16 +1,1 @@
-@keyframes pulseBackground {
-  0% { opacity: 1; }
-  50% { opacity: 0.95; }
-  100% { opacity: 1; }
-}
-
-.void-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom right, #000000, #5e2e91);
-  z-index: -1;
-  animation: pulseBackground 8s ease-in-out infinite alternate;
-}
+@keyframes pulseBackground{0%,100%{opacity:1}50%{opacity:.95}}.void-background{position:fixed;top:0;left:0;width:100%;height:100%;background:linear-gradient(to bottom right,#000,#5e2e91);z-index:-1;animation:8s ease-in-out infinite alternate pulseBackground}

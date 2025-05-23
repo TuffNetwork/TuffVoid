@@ -1,18 +1,1 @@
-  const popup = document.getElementById('announcementPopup');
-  const allowedDomains = ['wasd.infintecampus.info', 'html.infintecampus.info'];
-
-  const currentDomain = window.location.hostname;
-  const hasSeenPopup = localStorage.getItem('void_announcement_seen');
-
-  const isAllowedDomain = allowedDomains.includes(currentDomain);
-
-  if (!hasSeenPopup && isAllowedDomain) {
-    popup.style.display = 'block';
-  } else {
-    popup.style.display = 'none';
-  }
-
-  function closeAnnouncement() {
-    popup.style.display = 'none';
-    localStorage.setItem('void_announcement_seen', 'true');
-  }
+const popup=document.getElementById("announcementPopup"),allowedDomains=["wasd.infintecampus.info","html.infintecampus.info"],currentDomain=window.location.hostname,hasSeenPopup=localStorage.getItem("void_announcement_seen"),isAllowedDomain=allowedDomains.includes(currentDomain);function closeAnnouncement(){popup.style.display="none",localStorage.setItem("void_announcement_seen","true")}popup.style.display=!hasSeenPopup&&isAllowedDomain?"block":"none";
