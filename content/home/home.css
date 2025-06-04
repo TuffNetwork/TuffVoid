@@ -7,7 +7,6 @@
     html, body {
       height: 100%;
       font-family: 'Poppins', sans-serif;
-      background: transparent;
       overflow: hidden;
       display: flex;
       align-items: center;
@@ -30,61 +29,46 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       text-shadow: 0 0 20px rgba(150, 100, 250, 0.6);
-      margin-bottom: 30px;
-      animation: fadeIn 1s ease-out forwards;
-    }
-
-.explore-btn {
-  padding: 14px 32px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  background: linear-gradient(135deg, #8e44ad, #3498db);
-  color: white;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  box-shadow: 0 0 15px rgba(140, 100, 240, 0.5);
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
-  transition: all 0.3s ease;
-  animation: fadeIn 1s ease-out forwards;
-  text-decoration: none;
-  margin-bottom: 8px;
-}
-
-    .explore-btn:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 25px rgba(140, 100, 240, 0.8);
-    }
-
-    .content {
-      display: none;
-    }
-
-    .description {
-      font-weight: bold;
-      font-size: 1.2rem;
-      color: #ffffff;
+      margin-bottom: 40px;
+      animation: zoomFadeIn 1s ease-out forwards;
       text-align: center;
-      margin-top: 10px;
-      line-height: 1.5;
-      animation: fadeIn 1.2s ease-out forwards;
     }
 
-    @keyframes fadeIn {
+    .search-bar {
+      padding: 16px 28px;
+      font-size: 1.2rem;
+      font-weight: 500;
+      width: 600px;
+      max-width: 95%;
+      border: none;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.07);
+      color: #ffffff;
+      box-shadow: 0 0 20px rgba(140, 100, 240, 0.5);
+      text-align: center;
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+      outline: none;
+      animation: zoomFadeIn 1.2s ease-out forwards;
+      transition: all 0.3s ease;
+    }
+
+    .search-bar::placeholder {
+      color: #ccc;
+      text-align: center;
+    }
+
+    .search-bar:focus {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(140, 100, 240, 0.8);
+    }
+
+    @keyframes zoomFadeIn {
       from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: scale(0.95) translateY(20px);
       }
       to {
         opacity: 1;
-        transform: translateY(0);
+        transform: scale(1) translateY(0);
       }
     }
-
-
-.button-group {
-  align-items: center; 
-  gap: 20px;
-  margin-bottom: 8px;
-  animation: fadeIn 1s ease-out forwards;
-}
